@@ -7,10 +7,16 @@
   "dependencies": {
     "@apollo/server": "^4.9.1",
     "@types/node": "^20.5.1",
-    "graphql": "^16.8.0"
+    "graphql": "^16.8.0",
+    "graphql-tag": "^2.12.6",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
   },
   "scripts": {
     "compile": "tsc",
-    "start": "yarn start && node ./dist/index/ts"
+    "start": "yarn run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --exec node --loader ts-node/esm server.ts",
+    "dev": "nodemon server.ts"
   }
 }
