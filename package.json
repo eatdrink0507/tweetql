@@ -1,0 +1,16 @@
+{
+  "name": "tweetql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^4.9.1",
+    "@types/node": "^20.5.1",
+    "graphql": "^16.8.0"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "start": "yarn start && node ./dist/index/ts"
+  }
+}
